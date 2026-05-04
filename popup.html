@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Outlook Optimizer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Outlook Email Assistant</title>
+    <link rel="stylesheet" href="Styles.css">
     <style>
         body {
-            width: 280px;
+            width: 320px;
             margin: 0;
-            padding: 16px;
-            background: #0f172a;
-            color: white;
+            padding: 18px;
+            background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
+            color: #0f172a;
             font-family: Arial, Helvetica, sans-serif;
         }
 
         h2 {
             margin: 0 0 6px;
+            font-size: 21px;
         }
 
         p {
-            color: #94a3b8;
+            color: #475569;
             font-size: 13px;
+            line-height: 1.45;
         }
 
         button {
@@ -32,13 +34,40 @@
             font-weight: bold;
         }
 
+        .card {
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid #cbd5e1;
+            border-radius: 16px;
+            padding: 14px;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+        }
+
+        .eyebrow {
+            margin-bottom: 8px;
+            color: #2563eb;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .status {
+            margin-top: 12px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: #e2e8f0;
+            color: #0f172a;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
         #scanBtn {
             background: #2563eb;
             color: white;
         }
 
         #showBtn {
-            background: #16a34a;
+            background: #0f766e;
             color: white;
         }
 
@@ -49,12 +78,17 @@
     </style>
 </head>
 <body>
-    <h2>Outlook Optimizer</h2>
-    <p>Use these controls while Outlook Web is open.</p>
+    <div class="card">
+        <div class="eyebrow">Outlook Assistant</div>
+        <h2>Priority Dashboard</h2>
+        <p>Scan Outlook Web and open the student-focused sidebar from the proposal and Figma frames.</p>
 
-    <button id="scanBtn">Scan Outlook</button>
-    <button id="showBtn">Show Dashboard</button>
-    <button id="hideBtn">Hide Dashboard</button>
+        <button id="scanBtn">Scan Inbox</button>
+        <button id="showBtn">Show Sidebar</button>
+        <button id="hideBtn">Hide Sidebar</button>
+
+        <div id="status" class="status">Ready for Outlook Web</div>
+    </div>
 
     <script src="popup.js"></script>
 </body>
