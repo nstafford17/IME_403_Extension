@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Outlook Optimizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            width: 280px;
+            margin: 0;
+            padding: 16px;
+            background: #0f172a;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2 {
+            margin: 0 0 6px;
+        }
+
+        p {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        button {
+            width: 100%;
+            padding: 11px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #scanBtn {
+            background: #2563eb;
+            color: white;
+        }
+
+        #showBtn {
+            background: #16a34a;
+            color: white;
+        }
+
+        #hideBtn {
+            background: #dc2626;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Outlook Optimizer</h2>
+    <p>Use these controls while Outlook Web is open.</p>
+
+    <button id="scanBtn">Scan Outlook</button>
+    <button id="showBtn">Show Dashboard</button>
+    <button id="hideBtn">Hide Dashboard</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>

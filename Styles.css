@@ -1,0 +1,144 @@
+body {
+    margin: 0 !important;
+    background: #f4f7fb !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+#oo-integrated-app {
+    width: 100vw;
+    height: 100vh;
+    background: #f4f7fb;
+    color: #1e293b;
+}
+
+.oo-app {
+    width: 100%;
+    height: 100%;
+}
+
+.oo-topbar {
+    height: 50px;
+    background: #e8eef5;
+    border-bottom: 1px solid #b8c5d4;
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    padding: 0 30px;
+}
+
+.oo-topbar strong {
+    color: #0f5599;
+}
+
+.oo-topbar input {
+    width: 420px;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.oo-main {
+    display: grid;
+    grid-template-columns: 160px 1fr 380px;
+    height: calc(100vh - 50px);
+}
+
+.oo-sidebar {
+    background: #eef2f7;
+    padding: 40px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    border-right: 1px solid #d1d9e6;
+}
+
+.oo-sidebar button {
+    padding: 12px;
+    border: 1px solid #cfd8e3;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+.oo-sidebar button.active {
+    background: #dbeafe;
+}
+
+.oo-inbox {
+    padding: 30px;
+}
+
+.oo-inbox h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.oo-email-card {
+    background: white;
+    border: 1px solid #d7dee8;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.oo-email-card p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #475569;
+}
+
+.oo-email-card.urgent {
+    background: #fff7d6;
+    border-color: #facc15;
+}
+
+.oo-email-card.important {
+    background: #eef6ff;
+    border-color: #93c5fd;
+}
+
+.oo-dashboard {
+    margin: 30px 30px 30px 0;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.oo-dashboard h3 {
+    margin-top: 0;
+}
+
+.oo-stats {
+    display: flex;
+    gap: 18px;
+    margin: 24px 0;
+}
+
+.oo-stats div {
+    flex: 1;
+    background: #eef2f7;
+    border: 1px solid #d4dce7;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+}
+
+.oo-stats div.red {
+    background: #fee2e2;
+}
+
+.oo-stats strong {
+    display: block;
+    font-size: 26px;
+}
+
+.oo-stats span {
+    font-size: 12px;
+}
+
+.oo-dashboard label {
+    display: block;
+    margin: 18px 0;
+    font-size: 14px;
+}
