@@ -1,94 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Outlook Email Assistant</title>
-    <link rel="stylesheet" href="Styles.css">
+    <title>Outlook Optimizer AI</title>
     <style>
-        body {
-            width: 320px;
-            margin: 0;
-            padding: 18px;
-            background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
-            color: #0f172a;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        h2 {
-            margin: 0 0 6px;
-            font-size: 21px;
-        }
-
-        p {
-            color: #475569;
-            font-size: 13px;
-            line-height: 1.45;
-        }
-
-        button {
-            width: 100%;
-            padding: 11px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.88);
-            border: 1px solid #cbd5e1;
-            border-radius: 16px;
-            padding: 14px;
-            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
-        }
-
-        .eyebrow {
-            margin-bottom: 8px;
-            color: #2563eb;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .status {
-            margin-top: 12px;
-            padding: 10px 12px;
-            border-radius: 12px;
-            background: #e2e8f0;
-            color: #0f172a;
-            font-size: 12px;
-            font-weight: 700;
-        }
-
-        #scanBtn {
-            background: #2563eb;
-            color: white;
-        }
-
-        #showBtn {
-            background: #0f766e;
-            color: white;
-        }
-
-        #hideBtn {
-            background: #dc2626;
-            color: white;
-        }
+        body { width: 300px; margin: 0; padding: 16px; background: #0f172a; color: white; font-family: Arial, Helvetica, sans-serif; }
+        h2 { margin: 0 0 6px; }
+        p { color: #94a3b8; font-size: 13px; }
+        input { width: 100%; box-sizing: border-box; padding: 10px; border-radius: 10px; border: 1px solid #334155; background: #020617; color: white; margin-top: 8px; }
+        button { width: 100%; padding: 11px; margin-top: 10px; border: none; border-radius: 12px; cursor: pointer; font-weight: bold; color: white; }
+        #saveKeyBtn { background: #64748b; }
+        #showBtn { background: #16a34a; }
+        #aiBtn { background: #9333ea; }
+        #currentBtn { background: #0ea5e9; }
+        #scanBtn { background: #2563eb; }
+        #hideBtn { background: #dc2626; }
+        .small { font-size: 11px; color: #94a3b8; margin-top: 6px; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="eyebrow">Outlook Assistant</div>
-        <h2>Priority Dashboard</h2>
-        <p>Scan Outlook Web and open the student-focused sidebar from the proposal and Figma frames.</p>
+    <h2>Outlook Optimizer AI</h2>
+    <p>Open an email in Outlook, then analyze it.</p>
 
-        <button id="scanBtn">Scan Inbox</button>
-        <button id="showBtn">Show Sidebar</button>
-        <button id="hideBtn">Hide Sidebar</button>
+    <input id="apiKeyInput" type="password" placeholder="Paste OpenAI API key for demo">
+    <button id="saveKeyBtn">Save API Key</button>
+    <div class="small">Class demo only. Do not ship production keys in a browser extension.</div>
 
-        <div id="status" class="status">Ready for Outlook Web</div>
-    </div>
+    <button id="showBtn">Show Sidebar</button>
+    <button id="aiBtn">AI Analyze Current Email</button>
+    <button id="currentBtn">Rule Scan Current Email</button>
+    <button id="scanBtn">Scan Visible Emails</button>
+    <button id="hideBtn">Hide Sidebar</button>
 
     <script src="popup.js"></script>
 </body>

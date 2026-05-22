@@ -1,257 +1,260 @@
-#oo-assistant-root {
+#oo-sidebar {
     position: fixed;
-    top: 16px;
-    right: 16px;
-    z-index: 2147483647;
-    width: 420px;
-    max-height: calc(100vh - 32px);
-    color: #0f172a;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#oo-assistant-root .oo-shell {
-    display: flex;
-    flex-direction: column;
-    max-height: calc(100vh - 32px);
-    overflow: hidden;
-    border-radius: 22px;
-    border: 1px solid #cbd5e1;
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.22);
-    backdrop-filter: blur(18px);
-}
-
-#oo-assistant-root .oo-header {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 18px 18px 12px;
-}
-
-#oo-assistant-root .oo-eyebrow {
-    margin-bottom: 6px;
-    color: #2563eb;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-#oo-assistant-root h2,
-#oo-assistant-root h3 {
-    margin: 0;
-}
-
-#oo-assistant-root .oo-icon-button,
-#oo-assistant-root .oo-tabs button,
-#oo-assistant-root .oo-primary,
-#oo-assistant-root .oo-list-email,
-#oo-assistant-root .oo-email-card {
-    font: inherit;
-}
-
-#oo-assistant-root .oo-icon-button,
-#oo-assistant-root .oo-tabs button,
-#oo-assistant-root .oo-list-email {
-    border: 1px solid #cbd5e1;
-    background: white;
-    color: #0f172a;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-#oo-assistant-root .oo-tabs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding: 0 18px 12px;
-}
-
-#oo-assistant-root .oo-tabs button {
-    padding: 10px 12px;
-}
-
-#oo-assistant-root .oo-tabs button.active {
-    background: #dbeafe;
-    border-color: #93c5fd;
-}
-
-#oo-assistant-root .oo-toolbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 0 18px 14px;
-    color: #475569;
-    font-size: 12px;
-}
-
-#oo-assistant-root .oo-primary {
-    border: 0;
-    border-radius: 12px;
-    background: #2563eb;
+    top: 72px;
+    right: 18px;
+    width: 360px;
+    max-height: 86vh;
+    overflow-y: auto;
+    background: #0f172a;
     color: white;
-    padding: 10px 14px;
-    font-weight: 700;
+    border-radius: 18px;
+    padding: 16px;
+    z-index: 999999;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+}
+
+.oo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.oo-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.oo-header p {
+    margin: 4px 0 12px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+#oo-close {
+    background: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
     cursor: pointer;
 }
 
-#oo-assistant-root .oo-content {
-    overflow: auto;
-    padding: 0 18px 18px;
-}
-
-#oo-assistant-root .oo-stats {
+.oo-stats {
     display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 8px;
+    margin-bottom: 12px;
 }
 
-#oo-assistant-root .oo-stats div {
+.oo-box {
     flex: 1;
-    background: #eef2ff;
-    border: 1px solid #c7d2fe;
-    border-radius: 16px;
-    padding: 14px;
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 12px;
     text-align: center;
 }
 
-#oo-assistant-root .oo-stats div.red {
-    background: #fee2e2;
-    border-color: #fecaca;
+.oo-box.red {
+    background: #7f1d1d;
 }
 
-#oo-assistant-root .oo-stats strong {
+.oo-box.yellow {
+    background: #78350f;
+}
+
+.oo-box strong {
     display: block;
-    font-size: 24px;
+    font-size: 21px;
 }
 
-#oo-assistant-root .oo-stats span {
-    font-size: 12px;
-    color: #475569;
+.oo-box span {
+    font-size: 11px;
+    color: #cbd5e1;
 }
 
-#oo-assistant-root .oo-section {
-    margin-bottom: 18px;
-}
-
-#oo-assistant-root .oo-email-card,
-#oo-assistant-root .oo-task-card,
-#oo-assistant-root .oo-summary-card {
+#oo-ai-current,
+#oo-scan-current,
+#oo-scan-visible {
     width: 100%;
-    margin-top: 10px;
-    padding: 14px;
-    text-align: left;
-    border-radius: 16px;
-    border: 1px solid #dbe4f0;
-    background: white;
+    margin-bottom: 8px;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-#oo-assistant-root .oo-email-card {
+#oo-ai-current { background: #9333ea; }
+#oo-scan-current { background: #16a34a; }
+#oo-scan-visible { background: #2563eb; }
+
+.oo-section { margin-top: 14px; }
+.oo-section h3 { margin: 0 0 8px; font-size: 15px; }
+
+#oo-list {
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.oo-item {
+    background: #1e293b;
+    border-left: 5px solid #64748b;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 9px;
+    font-size: 12px;
+}
+
+.oo-item.urgent { border-left-color: #ef4444; }
+.oo-item.deadline { border-left-color: #f59e0b; }
+
+.oo-item p {
+    margin: 0 0 7px;
+    line-height: 1.35;
+}
+
+.oo-tags { margin-bottom: 6px; }
+
+.oo-tag {
+    display: inline-block;
+    padding: 3px 7px;
+    border-radius: 999px;
+    margin-right: 4px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.oo-tag.red { background: #fee2e2; color: #991b1b; }
+.oo-tag.yellow { background: #fef3c7; color: #92400e; }
+.oo-tag.blue { background: #dbeafe; color: #1e40af; }
+
+.oo-item small {
+    display: block;
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.oo-actions { display: flex; gap: 6px; }
+
+.oo-actions button,
+#oo-add-summary-task {
+    flex: 1;
+    padding: 7px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #334155;
+    color: white;
+    font-size: 11px;
+}
+
+.oo-summary {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 13px;
+}
+
+.oo-summary h3,
+.oo-summary h4 {
+    margin-bottom: 6px;
+}
+
+.oo-summary ul { padding-left: 18px; }
+
+.oo-add-task {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.oo-add-task input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 9px;
+    border: 1px solid #334155;
+    background: #020617;
+    color: white;
+}
+
+.oo-add-task button {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
     cursor: pointer;
 }
 
-#oo-assistant-root .oo-email-card.urgent {
-    background: #fff7d6;
-    border-color: #facc15;
+#oo-todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-#oo-assistant-root .oo-email-card.important {
-    background: #eef6ff;
-    border-color: #93c5fd;
-}
-
-#oo-assistant-root .oo-email-card p,
-#oo-assistant-root .oo-summary-card p {
-    margin: 6px 0 0;
-    color: #475569;
-    font-size: 13px;
-    line-height: 1.45;
-}
-
-#oo-assistant-root .oo-email-subject {
-    margin-top: 6px;
-    font-weight: 700;
-}
-
-#oo-assistant-root .oo-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-}
-
-#oo-assistant-root .oo-tags span {
-    display: inline-flex;
-    align-items: center;
-    padding: 5px 8px;
-    border-radius: 999px;
-    background: #e2e8f0;
-    color: #334155;
-    font-size: 11px;
-    font-weight: 700;
-}
-
-#oo-assistant-root .oo-columns {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-}
-
-#oo-assistant-root .oo-column {
-    padding: 14px;
-    border: 1px solid #dbe4f0;
-    border-radius: 18px;
-    background: #f8fafc;
-}
-
-#oo-assistant-root .oo-task-card strong,
-#oo-assistant-root .oo-list-email strong {
-    display: block;
-}
-
-#oo-assistant-root .oo-task-card span,
-#oo-assistant-root .oo-list-email span {
-    color: #475569;
+.oo-task {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 9px;
+    margin-bottom: 8px;
     font-size: 12px;
 }
 
-#oo-assistant-root .oo-summary-layout {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 12px;
+.oo-task label {
+    display: flex;
+    gap: 7px;
+    align-items: start;
 }
 
-#oo-assistant-root .oo-email-list {
-    display: grid;
-    gap: 8px;
+.oo-task.done span {
+    text-decoration: line-through;
+    color: #94a3b8;
 }
 
-#oo-assistant-root .oo-list-email {
-    padding: 12px;
-    text-align: left;
+.oo-task small {
+    display: inline-block;
+    margin-top: 6px;
+    color: #93c5fd;
 }
 
-#oo-assistant-root .oo-list-email.active {
-    background: #dbeafe;
-    border-color: #93c5fd;
+.oo-task button {
+    float: right;
+    margin-top: 4px;
+    border: none;
+    background: #7f1d1d;
+    color: white;
+    border-radius: 7px;
+    padding: 4px 7px;
+    cursor: pointer;
+    font-size: 10px;
 }
 
-#oo-assistant-root .oo-bullets {
-    display: grid;
-    gap: 8px;
-    margin-top: 14px;
+.oo-empty,
+.oo-empty-task {
+    color: #94a3b8;
+    font-size: 12px;
 }
 
-#oo-assistant-root .oo-bullets div {
-    padding: 10px 12px;
-    border-radius: 12px;
-    background: #eff6ff;
-    font-size: 13px;
+.oo-inline-highlight {
+    outline: 2px solid #f59e0b !important;
+    border-radius: 6px !important;
 }
 
-#oo-assistant-root .oo-empty {
-    color: #64748b;
-    font-size: 13px;
+#oo-local-ai {
+    background: #8B4513 !important;
+}
+
+#oo-local-ai:hover {
+    background: #a0522d !important;
+}
+
+#oo-back-btn {
+    background: #7c3aed !important;
+    color: white !important;
+}
+
+#oo-back-btn:hover {
+    background: #6d28d9 !important;
 }

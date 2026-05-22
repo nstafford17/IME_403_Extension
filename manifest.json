@@ -1,21 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "Outlook Email Assistant",
-  "version": "1.1.0",
-  "description": "A Chrome extension that adds a priority dashboard, urgent email detection, summaries, and task extraction to Outlook Web.",
-  "permissions": [
-    "activeTab",
-    "storage"
-  ],
+  "name": "Outlook Optimizer AI",
+  "version": "5.0.0",
+  "description": "Sidebar assistant for Outlook that scans emails, uses AI for summaries/deadlines/tasks, and creates to-do items.",
+  "permissions": ["activeTab", "scripting", "storage"],
   "host_permissions": [
     "https://outlook.office.com/*",
     "https://outlook.live.com/*",
     "https://outlook.office365.com/*",
-    "https://outlook.cloud.microsoft/*"
+    "https://outlook.cloud.microsoft/*",
+    "https://api.openai.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Outlook Email Assistant"
+    "default_title": "Outlook Optimizer AI"
   },
   "content_scripts": [
     {
@@ -26,7 +24,7 @@
         "https://outlook.cloud.microsoft/*"
       ],
       "js": ["content.js"],
-      "css": ["Styles.css"],
+      "css": ["styles.css"],
       "run_at": "document_idle"
     }
   ]
